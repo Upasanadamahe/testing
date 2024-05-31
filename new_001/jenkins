@@ -16,16 +16,16 @@ pipeline {
         }
         stage('Hello3') {
             steps {
-                 dir('new_001'){
+                 
                 sh 'terraform plan'
-                }
+                
             }
         }
         stage('Hello4') {
             steps {
-                     dir('new_001'){
+                    
                 sh 'terraform apply --auto-approve'
-            }
+            
         }
     }
 }
