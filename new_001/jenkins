@@ -10,18 +10,23 @@ pipeline {
         }
         stage('Hello2') {
             steps {
+             
                 sh 'terraform init'
             }
         }
         stage('Hello3') {
             steps {
+                 dir('new_001'){
                 sh 'terraform plan'
+                }
             }
         }
         stage('Hello4') {
             steps {
+                     dir('new_001'){
                 sh 'terraform apply --auto-approve'
             }
         }
     }
+}
 }
