@@ -1,0 +1,28 @@
+
+~
+pipeline {
+    agent any
+
+    stages {
+        stage('Hello1') {
+            steps {
+                git branch: 'main', url: 'https://github.com/Upasanadamahe/testing.git'
+            }
+        }
+        stage('Hello2') {
+            steps {
+                sh 'terraform init'
+            }
+        }
+        stage('Hello3') {
+            steps {
+                sh 'terraform plan'
+            }
+        }
+        stage('Hello4') {
+            steps {
+                sh 'terraform ${operate} --auto-approve'
+            }
+        }
+    }
+}
