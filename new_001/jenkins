@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Hello1') {
             steps {
-                git branch: 'main', url: 'https://github.com/Upasanadamahe/testing.git'
+               git branch: 'main', url: 'https://github.com/Upasanadamahe/testing.git'
             }
         }
         stage('Hello2') {
