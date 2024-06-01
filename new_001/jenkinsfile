@@ -3,25 +3,25 @@ pipeline {
     agent any
 
     stages {
-        stage('Hello1') {
+        stage('Hello-1') {
             steps {
                git branch: 'main', url: 'https://github.com/Upasanadamahe/testing.git'
             }
         }
-        stage('Hello2') {
+        stage('Hello-2') {
             steps {
              
                 sh 'terraform init'
             }
         }
-        stage('Hello3') {
+        stage('Hello-3') {
             steps {
                  
                 sh 'terraform plan'
                 
             }
         }
-        stage('Hello4') {
+        stage('Hello-4') {
             steps {
                     
                 sh 'terraform destroy --auto-approve'
