@@ -6,6 +6,6 @@ ami = "ami-00beae93a2d981137"
 instance_type ="t2.micro"
 key_name="pvt"
 tags={
-Name ="server"
+Name ="server001"
 }
 }
